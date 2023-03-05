@@ -1,5 +1,9 @@
 - hosts: dockerhost
   tasks:
+    - name: stop container
+      shell: docker container stop mygreenhostall
+    - name: remove container
+      shell: docker container rm mygreenhostall
     - name: remove docker image
       shell: docker image rm 959597/mygreenhost
     - name: create container
