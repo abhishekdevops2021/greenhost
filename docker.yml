@@ -1,10 +1,4 @@
 - hosts: all
-  tasks:
-   	- name: stop container..
-    	shell: docker container stop greenhostnew
- 	  - name: remove container
-    	shell: docker container rm greenhostnew
- 	  - name: remove docker image
-    	shell: docker image rm 959597/greenhost
+  tasks: 
  	  - name: create container
-   	  shell: docker container run -itd --name greenhostnew -p 9000:80 959597/greenhost
+   	  shell: docker container run -itd --name mygreenhost -p 9000:80 959597/mygreenhost
